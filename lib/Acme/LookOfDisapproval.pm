@@ -3,7 +3,17 @@ use warnings;
 package Acme::LookOfDisapproval;
 # ABSTRACT: ...
 
+use utf8;
+use Exporter;
+our @EXPORT = ('ಠ_ಠ');
 
+sub import
+{
+    utf8->import;
+    goto &Exporter::import;
+}
+
+sub ಠ_ಠ { goto &CORE::warn }
 
 1;
 __END__

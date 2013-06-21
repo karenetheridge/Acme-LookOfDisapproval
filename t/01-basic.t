@@ -2,9 +2,14 @@ use strict;
 use warnings FATAL => 'all';
 
 use Test::More;
-use Test::Warnings;
+use Test::Warnings ':all';
 use Acme::LookOfDisapproval;
 
-fail('this test is TODO!');
+my $line; my $file = __FILE__;
+is(
+    warning { ಠ_ಠ('oh noes'); $line = __LINE__ },
+    "oh noes at $file line $line.\n",
+    'warning appears, and with the right file and line',
+);
 
 done_testing;
