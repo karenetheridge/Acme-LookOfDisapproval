@@ -54,6 +54,8 @@ Behaves identically to L<perlfunc/warn>.
 
 =head1 BACKGROUND
 
+=for stopwords unicode
+
 I wrote this as an exercise in using unicode in code, not just in a string.
 Then, it became an interesting learning experience in how to cleanly map to a
 core function, and re-exporting symbols.
