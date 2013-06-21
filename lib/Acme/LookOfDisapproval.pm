@@ -2,7 +2,9 @@ use strict;
 use warnings;
 package Acme::LookOfDisapproval;
 # ABSTRACT: send warnings with ಠ_ಠ
-
+{
+    $Acme::LookOfDisapproval::VERSION = '0.001';
+}
 use utf8;
 use Exporter;
 our @EXPORT = ('ಠ_ಠ');
@@ -19,6 +21,16 @@ sub ಠ_ಠ { goto &CORE::warn }
 __END__
 
 =pod
+
+=encoding utf-8
+
+=head1 NAME
+
+Acme::LookOfDisapproval  - send warnings with ಠ_ಠ
+
+=head1 VERSION
+
+version 0.001
 
 =head1 SYNOPSIS
 
@@ -78,10 +90,21 @@ I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 
 =head1 SEE ALSO
 
-=begin :list
+=over
 
-* L<the Look of Disapproval Meme|http://knowyourmeme.com/memes/%E0%B2%A0_%E0%B2%A0-look-of-disapproval>
+=item * L<the Look of Disapproval Meme|http://knowyourmeme.com/memes/%E0%B2%A0_%E0%B2%A0-look-of-disapproval>
 
-=end :list
+=back
+
+=head1 AUTHOR
+
+Karen Etheridge <ether@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Karen Etheridge.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

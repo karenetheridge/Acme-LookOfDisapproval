@@ -1,5 +1,5 @@
-Revision history for {{$dist->name}}
+Revision history for Acme-LookOfDisapproval
 
-{{$NEXT}}
+0.001
           - Initial release.
 
