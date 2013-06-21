@@ -82,6 +82,8 @@ call C<import> directly on L<utf8> (it's a pragma, so the caller doesn't
 matter -- only when it is called: during the caller's compilation cycle),
 and then we can export our symbol by using L<goto> to jump to L<Exporter>.
 
+=for stopwords dzil utf8
+
 I also discovered while writing this distribution that L<Dist::Zilla> is not
 able to munge files with utf8 characters, therefore I had to switch packaging
 this distribution to vanilla L<ExtUtils::MakeMaker>; also, a number of the
