@@ -1,0 +1,7 @@
+#!include_default
+
+Acme-LookOfDisapproval-
+\..*\.sw.?$
+^TODO
+^todo
+todo.txt
