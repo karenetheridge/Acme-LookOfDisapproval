@@ -1,5 +1,7 @@
 Revision history for Acme-LookOfDisapproval
 
+          - add missing prereqs to metadata
+
 0.001     2013-06-21
           - Initial release.
 

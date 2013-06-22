@@ -22,7 +22,16 @@ my %WriteMakefileArgs = (
         'File::Find' => 0,
         'File::Temp' => 0,
         'Test::CheckDeps' => '0.002',
-        'Test::More' => '0.94'
+        'Test::More' => '0.94',
+        'Test::Warnings' => '0.005',
+    },
+    BUILD_REQUIRES => {
+        'Test::Spelling' => '0.12',
+        'Pod::Wordlist::hanekomu' => 0,
+        'Test::CPAN::Meta' => 0,
+        'Test::EOL' => 0,
+        'Test::NoTabs' => 0,
+        'Test::Pod' => '1.41',
     },
 );
 
