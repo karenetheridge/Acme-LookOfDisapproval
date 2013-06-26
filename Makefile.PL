@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use 5.006;
+use 5.016000;
 use ExtUtils::MakeMaker 6.30;
 
 my %WriteMakefileArgs = (
