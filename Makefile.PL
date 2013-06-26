@@ -11,6 +11,7 @@ my %WriteMakefileArgs = (
     LICENSE       => 'perl',
 
     PL_FILES      => {},
+    MIN_PERL_VERSION => '5.016000',
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => '6.30',
     },
