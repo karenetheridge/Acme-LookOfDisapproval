@@ -3,7 +3,7 @@ use warnings;
 package Acme::LookOfDisapproval;
 # ABSTRACT: send warnings with ಠ_ಠ
 {
-    $Acme::LookOfDisapproval::VERSION = '0.002';
+    $Acme::LookOfDisapproval::VERSION = '0.003';
 }
 use utf8;
 use Exporter;
