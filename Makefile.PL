@@ -34,6 +34,23 @@ my %WriteMakefileArgs = (
         'Test::NoTabs' => 0,
         'Test::Pod' => '1.41',
     },
+    META_MERGE => {
+        'meta-spec' => { version => 2 },
+        dynamic_config => 0,
+        resources => {
+            bugtracker => {
+                mailto => 'bug-Acme-LookOfDisapproval@rt.cpan.org',
+                web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Acme-LookOfDisapproval',
+            },
+            homepage => 'https://github.com/karenetheridge/Acme-LookOfDisapproval',
+            repository => {
+                type => 'git',
+                url => 'https://github.com/karenetheridge/Acme-LookOfDisapproval.git',
+                web => 'https://github.com/karenetheridge/Acme-LookOfDisapproval',
+            }
+        },
+        x_authority => 'cpan:ETHER',
+    },
 );
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
