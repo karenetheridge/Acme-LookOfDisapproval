@@ -7,7 +7,7 @@ package Acme::ಠ_ಠ;
     $Acme::ಠ_ಠ::VERSION = '0.004';
 }
 BEGIN {
-    $Acme::ಠ_ಠ::AUTHORITY = 'cpan:ETHER';
+    our $AUTHORITY = 'cpan:ETHER';
 }
 
 use Acme::LookOfDisapproval;

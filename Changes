@@ -2,6 +2,7 @@ Revision history for Acme-LookOfDisapproval
 
           - more metadata added, including git repository and bugtracker
             location
+          - compilation test fixed (see perl RT#118707)
 
 0.003     2013-06-26
           - minimum perl version bumped to 5.16.0 (see

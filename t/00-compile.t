@@ -4,21 +4,17 @@ use strict;
 use warnings;
 
 use Test::More 0.94;
-plan skip_all => 'require() does not like utf8 characters';
 
 use File::Find;
 use File::Temp qw{ tempdir };
 
-my @modules;
+my @module_files;
 find(
   sub {
     return if $File::Find::name !~ /\.pm\z/;
     my $found = $File::Find::name;
-    $found =~ s{^lib/}{};
-    $found =~ s{[/\\]}{::}g;
-    $found =~ s/\.pm$//;
     # nothing to skip
-    push @modules, $found;
+    push @module_files, $found;
   },
   'lib',
 );
@@ -50,15 +46,19 @@ my @scripts;
 do { push @scripts, _find_scripts($_) if -d $_ }
     for qw{ bin script scripts };
 
-my $plan = scalar(@modules) + scalar(@scripts);
+my $plan = scalar(@module_files) + scalar(@scripts);
 $plan ? (plan tests => $plan) : (plan skip_all => "no tests to run");
 
 {
     # fake home for cpan-testers
     # no fake requested ## local $ENV{HOME} = tempdir( CLEANUP => 1 );
 
-    like( qx{ $^X -Ilib -e "require $_; print '$_ ok'" }, qr/^\s*$_ ok/s, "$_ loaded ok" )
-        for sort @modules;
+    for my $lib (sort @module_files)
+    {
+        my $command = qq($^X -Ilib $lib );
+        system $command;
+        is($?, 0, "$lib loaded ok")
+    }
 
     SKIP: {
         eval "use Test::Script 1.05; 1;";

@@ -6,7 +6,7 @@ package Acme::LookOfDisapproval;
     $Acme::LookOfDisapproval::VERSION = '0.004';
 }
 BEGIN {
-    $Acme::LookOfDisapproval::AUTHORITY = 'cpan:ETHER';
+    our $AUTHORITY = 'cpan:ETHER';
 }
 
 use utf8;
@@ -92,8 +92,9 @@ I also discovered while writing this distribution that L<Dist::Zilla> is not
 able to munge files with utf8 characters, therefore I had to switch to packaging
 this distribution with vanilla L<ExtUtils::MakeMaker>; also, a number of the
 author and release tests that would have been added by dzil automatically
-don't work either (for example, see C<t/00-compile.t> -- C<< eval "require $_" >>
-dies when operating on a filename containing utf8 characters.
+didn't work either (for example, see C<t/00-compile.t> -- C<< qx(^$X "require $_") >>
+both needs the C<:binmode> or C<:encoding(UTF-8)> layer applied to C<STDOUT>, and
+requires the L<utf8> pragma applied in the sub-perl (leading to more patches).
 
 =head1 SUPPORT
 
