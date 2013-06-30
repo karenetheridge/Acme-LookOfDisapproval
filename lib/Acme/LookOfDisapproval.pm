@@ -89,8 +89,8 @@ and then we can export our symbol by using L<goto> to jump to L<Exporter>.
 =for stopwords dzil utf8
 
 I also discovered while writing this distribution that L<Dist::Zilla> is not
-able to munge files with utf8 characters, therefore I had to switch packaging
-this distribution to vanilla L<ExtUtils::MakeMaker>; also, a number of the
+able to munge files with utf8 characters, therefore I had to switch to packaging
+this distribution with vanilla L<ExtUtils::MakeMaker>; also, a number of the
 author and release tests that would have been added by dzil automatically
 don't work either (for example, see C<t/00-compile.t> -- C<< eval "require $_" >>
 dies when operating on a filename containing utf8 characters.
