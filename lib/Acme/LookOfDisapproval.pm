@@ -5,6 +5,10 @@ package Acme::LookOfDisapproval;
 {
     $Acme::LookOfDisapproval::VERSION = '0.004';
 }
+BEGIN {
+    $Acme::LookOfDisapproval::AUTHORITY = 'cpan:ETHER';
+}
+
 use utf8;
 use Exporter;
 our @EXPORT = ('ಠ_ಠ');
