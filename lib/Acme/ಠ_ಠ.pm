@@ -4,7 +4,7 @@ use utf8;
 package Acme::ಠ_ಠ;
 # ABSTRACT: send warnings with ಠ_ಠ
 {
-    $Acme::ಠ_ಠ::VERSION = '0.003';
+    $Acme::ಠ_ಠ::VERSION = '0.004';
 }
 
 use Acme::LookOfDisapproval;
@@ -28,7 +28,7 @@ Acme::ಠ_ಠ - send warnings with ಠ_ಠ
 
 =head1 VERSION
 
-version 0.002
+version 0.004
 
 =head1 SYNOPSIS
 
