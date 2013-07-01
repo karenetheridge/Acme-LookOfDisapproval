@@ -1,5 +1,6 @@
 Revision history for Acme-LookOfDisapproval
 
+0.004     2013-06-30
           - more metadata added, including git repository and bugtracker
             location
           - compilation test fixed (see perl RT#118707)
