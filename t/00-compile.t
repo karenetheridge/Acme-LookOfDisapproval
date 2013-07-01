@@ -7,6 +7,7 @@ use Test::More 0.94;
 
 use File::Find;
 use File::Temp qw{ tempdir };
+use Capture::Tiny qw{ capture };
 
 my @module_files;
 find(
@@ -46,19 +47,22 @@ my @scripts;
 do { push @scripts, _find_scripts($_) if -d $_ }
     for qw{ bin script scripts };
 
-my $plan = scalar(@module_files) + scalar(@scripts);
-$plan ? (plan tests => $plan) : (plan skip_all => "no tests to run");
-
 {
     # fake home for cpan-testers
     # no fake requested ## local $ENV{HOME} = tempdir( CLEANUP => 1 );
 
+    my @warnings;
     for my $lib (sort @module_files)
     {
-        my $command = qq($^X -Ilib $lib );
-        system $command;
-        is($?, 0, "$lib loaded ok")
+        my ($stdout, $stderr, $exit) = capture {
+            system($^X, '-Ilib', $lib);
+        };
+        is($?, 0, "$lib loaded ok");
+        warn $stderr if $stderr;
+        push @warnings, $stderr if $stderr;
     }
+
+    if ($ENV{AUTHOR_TESTING}) { is(scalar(@warnings), 0, 'no warnings found'); }
 
     SKIP: {
         eval "use Test::Script 1.05; 1;";
@@ -71,3 +75,5 @@ $plan ? (plan tests => $plan) : (plan skip_all => "no tests to run");
     }
     BAIL_OUT("Compilation failures") if !Test::More->builder->is_passing;
 }
+
+done_testing;
