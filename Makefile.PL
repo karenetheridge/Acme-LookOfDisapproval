@@ -3,6 +3,14 @@ use warnings;
 use 5.016000;
 use ExtUtils::MakeMaker 6.30;
 
+print <<NOTICE;
+
+ATTENTION! There are known issues with NTFS and unicode (specifically,
+NTFS uses UTF-16, but we use the legacy interface and assume that it's
+doing Latin-1) -- so this distribution might not build or test properly!
+
+NOTICE
+
 my %WriteMakefileArgs = (
     NAME          => 'Acme::LookOfDisapproval',
     AUTHOR        => 'Karen Etheridge <ether@cpan.org>',
