@@ -110,6 +110,8 @@ I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 
 =item * L<the Look of Disapproval Meme|http://knowyourmeme.com/memes/%E0%B2%A0_%E0%B2%A0-look-of-disapproval>
 
+=item * L<lambda> - another example of unicode sub names
+
 =back
 
 =head1 AUTHOR
