@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use utf8;
 package Acme::LookOfDisapproval;
 # ABSTRACT: send warnings with ಠ_ಠ
 {
@@ -9,7 +10,6 @@ BEGIN {
     our $AUTHORITY = 'cpan:ETHER';
 }
 
-use utf8;
 use Exporter;
 our @EXPORT = ('ಠ_ಠ');
 
