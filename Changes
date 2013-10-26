@@ -1,7 +1,13 @@
-Revision history for Acme-LookOfDisapproval
+Revision history for {{ $dist->name }}
 
+{{ $NEXT }}
           - notice printed during build process regarding incompatibilities
             with NTFS and unicode
+          - now packaging with Dist::Zilla 5.0
+            - required removing Acme::ಠ_ಠ, pending resolution of issues in
+              PPI, Module::Runtime and Params::Util
+            - required removing minimum version and pod coverage tests, pending
+              resolution of issues in Test::Pod::Coverage and PPI
 
 0.004     2013-06-30
           - more metadata added, including git repository and bugtracker
