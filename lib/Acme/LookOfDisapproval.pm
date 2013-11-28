@@ -30,15 +30,11 @@ __END__
 Use C<ಠ_ಠ> whenever you would use C<warn>, to express your profound
 disapproval.
 
-=head1 FUNCTIONS/METHODS
+=head1 FUNCTIONS
 
-=over 4
-
-=item * C<ಠ_ಠ>
+=head2 C<ಠ_ಠ>
 
 Behaves identically to L<perlfunc/warn>.
-
-=back
 
 =head1 BACKGROUND
 
