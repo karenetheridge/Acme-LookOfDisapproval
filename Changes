@@ -3,8 +3,6 @@ Revision history for {{ $dist->name }}
 {{ $NEXT }}
 
 0.005     2013-10-26 05:02:09Z (Karen Etheridge)
-          - notice printed during build process regarding incompatibilities
-            with NTFS and unicode
           - now packaging with Dist::Zilla 5.0
             - required removing Acme::ಠ_ಠ, pending resolution of issues in
               PPI, Module::Runtime and Params::Util
