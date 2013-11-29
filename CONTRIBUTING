@@ -19,33 +19,29 @@ patches you have.
 
 You may need to satisfy some dependencies.  The easiest way to satisfy
 dependencies is to install the last release -- this is available at
-http::/metacpan.org/release/Acme-LookOfDisapproval.
+https://metacpan.org/release/Acme-LookOfDisapproval.
 
-If you use cpanminus, you can simply do this from the root of the extracted
-tarball directory:
+If you use cpanminus, you can do it without downloading the tarball first:
 
-  $ cpanm --installdeps --with-recommends .
-
-Or, you can skip the download step entirely, with:
-
-  $ cpanm --with-recommends Acme-LookOfDisapproval
+  $ cpanm --reinstall --installdeps --with-recommends Acme::LookOfDisapproval
 
 Dist::Zilla is a very powerful authoring tool, but requires a number of
 author-specific plugins.  If you would like to use it for contributing,
 install it from CPAN, then run one of the following commands, depending on
 your CPAN client:
 
-  $ cpan `dzil authordeps`
-  $ dzil authordeps | cpanm
+  $ cpan `dzil authordeps --missing`
+  $ dzil authordeps --missing | cpanm
 
-You can also do this from the root of the extracted tarball directory, to
-install all developer tools directly:
+You should then also install any additional requirements not needed by the
+dzil build but may be needed by tests or other development:
 
-  $ cpanm --installdeps --with-develop --with-recommends .
+  # cpan `dzil listdeps --author --missing`
+  $ dzil listdeps --author --missing | cpanm
 
-Or do it all without downloading the distribution first:
+You can also do this via cpanm directly:
 
-  $ cpanm --with-develop --with-recommends Acme-LookOfDisapproval
+  $ cpanm --reinstall --installdeps --with-develop --with-recommends Acme::LookOfDisapproval
 
 Once installed, here are some dzil commands you might try:
 
@@ -54,7 +50,7 @@ Once installed, here are some dzil commands you might try:
   $ dzil test --release
   $ dzil xtest
   $ dzil listdeps --json
-  $ dzil build --not
+  $ dzil build --notgz
 
 You can learn more about Dist::Zilla at http://dzil.org/.
 
@@ -75,4 +71,4 @@ This is also a good place to send your questions about the usage of this distrib
 
 
 This file was generated via Dist::Zilla::Plugin::GenerateFile::ShareDir 0.002 from a
-template file originating in Dist-Zilla-PluginBundle-Author-ETHER-0.033.
+template file originating in Dist-Zilla-PluginBundle-Author-ETHER-0.041.
