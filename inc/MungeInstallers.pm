@@ -5,6 +5,7 @@ package inc::MungeInstallers;
 use utf8;
 use Moose;
 with 'Dist::Zilla::Role::InstallTool';
+use namespace::autoclean;
 
 # TODO - this should really be a separate phase that runs after InstallTool -
 # until then, all we can do is die if we are run too soon
