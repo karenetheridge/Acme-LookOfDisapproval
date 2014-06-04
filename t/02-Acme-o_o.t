@@ -5,7 +5,7 @@ use Test::More;
 use Test::Warnings 0.005 ':all';
 use utf8;
 use Acme::ಠ_ಠ;
-use JSON 2;
+use JSON::PP;
 
 binmode $_, ':utf8' foreach map { Test::Builder->new->$_ } qw(output failure_output todo_output);
 binmode STDOUT, ':utf8';
@@ -18,6 +18,6 @@ is(
     'warning appears, and with the right file and line',
 );
 
-diag '%INC is: ' . JSON->new->ascii(1)->canonical(1)->pretty->encode(\%INC);
+diag '%INC is: ' . JSON::PP->new->ascii->canonical->pretty->encode(\%INC);
 
 done_testing;

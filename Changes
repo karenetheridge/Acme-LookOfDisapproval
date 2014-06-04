@@ -1,6 +1,7 @@
 Revision history for {{ $dist->name }}
 
 {{ $NEXT }}
+          - switch from JSON to JSON::PP
 
 0.006     2013-11-29 18:22:26Z
           - Acme::ಠ_ಠ is back, with a lot of convoluted hoop-jumping to bypass
