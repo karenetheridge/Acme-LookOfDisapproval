@@ -1,5 +1,6 @@
+/.ackrc
 /.build/
-!.gitignore
-/Acme-LookOfDisapproval-*
-/todo.txt
-/todo/
+!/.gitignore
+/.latest
+/Acme-LookOfDisapproval-*/
+/Acme-LookOfDisapproval-*.tar.gz
