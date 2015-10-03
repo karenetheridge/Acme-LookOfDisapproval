@@ -1,4 +1,4 @@
-Revision history for {{ $dist->name }}
+Revision history for Acme-LookOfDisapproval
 
 {{ $NEXT }}
           - switch from JSON to JSON::PP
