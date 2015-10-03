@@ -7,7 +7,7 @@ Revision history for Acme-LookOfDisapproval
           - Acme::ಠ_ಠ is back, with a lot of convoluted hoop-jumping to bypass
             various broken bits of the toolchain (see git commit for details)
 
-0.005     2013-10-26 05:02:09Z (Karen Etheridge)
+0.005     2013-10-26 05:02:09Z
           - now packaging with Dist::Zilla 5.0
             - required removing Acme::ಠ_ಠ, pending resolution of issues in
               PPI, Module::Runtime and Params::Util
