@@ -79,14 +79,6 @@ didn't work either (for example, see C<t/00-compile.t> -- C<< qx(^$X "require $_
 both needs the C<:binmode> or C<:encoding(UTF-8)> layer applied to C<STDOUT>, and
 requires the L<utf8> pragma applied in the sub-perl (leading to more patches).
 
-=head1 SUPPORT
-
-=for stopwords irc
-
-Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=Acme-LookOfDisapproval>
-(or L<bug-Acme-LookOfDisapproval@rt.cpan.org|mailto:bug-Acme-LookOfDisapproval@rt.cpan.org>).
-I am also usually active on irc, as 'ether' at C<irc.perl.org>.
-
 =head1 SEE ALSO
 
 =for :list
