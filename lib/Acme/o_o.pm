@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use utf8;
 package Acme::ಠ_ಠ;
-# ABSTRACT: send warnings with ಠ_ಠ
+# ABSTRACT: Send warnings with ಠ_ಠ
 
 use Acme::LookOfDisapproval;
 our @EXPORT = ('ಠ_ಠ');
