@@ -3,6 +3,7 @@ use warnings;
 use utf8;
 package Acme::ಠ_ಠ;
 # ABSTRACT: Send warnings with ಠ_ಠ
+# vim: set ts=8 sts=4 sw=4 tw=115 et :
 
 use Acme::LookOfDisapproval;
 our @EXPORT = ('ಠ_ಠ');
