@@ -4,6 +4,7 @@ use utf8;
 package Acme::LookOfDisapproval;
 # vim: set ts=8 sts=4 sw=4 tw=115 et :
 # ABSTRACT: Send warnings with ಠ_ಠ
+# KEYWORDS: unicode canary warning utf8 symbol
 
 our $VERSION = '0.007';
 
