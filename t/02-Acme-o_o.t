@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More 0.88;
 use Test::Warnings 0.005 ':all';
 use utf8;
 use Acme::ಠ_ಠ;
