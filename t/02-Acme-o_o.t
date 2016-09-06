@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 use Test::More 0.88;
-use Test::Warnings 0.005 ':all';
+use Test::Warnings 0.009 ':no_end_test', ':all';
 use utf8;
 use Acme::ಠ_ಠ;
 use JSON::PP;
@@ -20,4 +20,5 @@ is(
 
 diag '%INC is: ' . JSON::PP->new->ascii->canonical->pretty->encode(\%INC);
 
+had_no_warnings if $ENV{AUTHOR_TESTING};
 done_testing;
