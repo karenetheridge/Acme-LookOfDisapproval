@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-package inc::Metadata;
+package Metadata;
 
 use Moose;
 extends 'Dist::Zilla::Plugin::RemovePrereqs';
