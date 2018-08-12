@@ -2,6 +2,8 @@ Revision history for Acme-LookOfDisapproval
 
 {{ $NEXT }}
           - switch from JSON to JSON::PP
+          - many fixes to build infrastructure to keep pace with changes to
+            the tooling ecosystem
 
 0.006     2013-11-29 18:22:26Z
           - Acme::ಠ_ಠ is back, with a lot of convoluted hoop-jumping to bypass
