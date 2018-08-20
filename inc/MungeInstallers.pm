@@ -20,6 +20,10 @@ sub setup_installer
 
     for my $file (@build_files)
     {
+        # check for template markers in file content
+        $self->log_fatal([ 'ran too soon, before %s template(s) evaluated', $file->name ])
+            if $file->content =~ /\{\{/;
+
         $file->content($file->content . <<'MOVE_MODULE');
 
 use File::Spec::Functions;
