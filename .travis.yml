@@ -15,8 +15,8 @@ perl:
   - "5.16"
 env:
   matrix:
-    - PERL_MM_FALLBACK_SILENCE_WARNING=0
-    - PERL_MM_FALLBACK_SILENCE_WARNING=1
+    - USE_BUILD_PL=1
+    - USE_MAKEFILE_PL=1
   global:
     - AUTHOR_TESTING=1
     - AUTOMATED_TESTING=1
@@ -31,11 +31,11 @@ before_install:
 install:
   - cpan-install --deps
 script:
-  - if [ $PERL_MM_FALLBACK_SILENCE_WARNING ] ; then
-      perl Makefile.PL
-      make
+  - if [ $USE_BUILD_PL ] ; then
+      perl Build.PL;
+      ./Build;
     else
-      perl Build.PL
-      ./Build
+      PERL_MM_FALLBACK_SILENCE_WARNING=1 perl Makefile.PL;
+      make;
     fi
   - prove -b -r -s -j$(test-jobs) $(test-files)
