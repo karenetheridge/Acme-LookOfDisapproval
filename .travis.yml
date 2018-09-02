@@ -14,6 +14,9 @@ perl:
   - "5.18"
   - "5.16"
 env:
+  matrix:
+    - USE_BUILD_PL=1
+    - USE_MAKEFILE_PL=1
   global:
     - AUTHOR_TESTING=1
     - AUTOMATED_TESTING=1
@@ -28,6 +31,9 @@ before_install:
 install:
   - cpan-install --deps
 script:
-  - perl Build.PL
-  - ./Build
+  - if [ $USE_BUILD_PL ] ; then
+      perl Build.PL; ./Build;
+    else
+      PERL_MM_FALLBACK_SILENCE_WARNING=1 perl Makefile.PL; make;
+    fi
   - prove -b -r -s -j$(test-jobs) $(test-files)
