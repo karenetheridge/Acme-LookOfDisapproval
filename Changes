@@ -1,6 +1,7 @@
 Revision history for Acme-LookOfDisapproval
 
 {{ $NEXT }}
+          - dummy change to silence Changes test, for this branch
 
 0.007     2018-09-02 21:00:36Z
           - switch from JSON to JSON::PP
