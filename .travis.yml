@@ -14,19 +14,16 @@ perl:
   - "5.18"
   - "5.16"
 matrix:
-  include:
-    - name: 'Build.PL'
-      script:
-        - perl Build.PL
-        - ./Build
-        - prove -b -r -s -j$(test-jobs) $(test-files)
-    - name: 'Makefile.PL'
-      env:
-        PERL_MM_FALLBACK_SILENCE_WARNING=1
-      script:
-        - perl Makefile.PL
-        - make
-        - prove -b -r -s -j$(test-jobs) $(test-files)
+  - script:
+      - perl Build.PL
+      - ./Build
+      - prove -b -r -s -j$(test-jobs) $(test-files)
+  - env:
+      PERL_MM_FALLBACK_SILENCE_WARNING=1
+    script:
+      - perl Makefile.PL
+      - make
+      - prove -b -r -s -j$(test-jobs) $(test-files)
 env:
   global:
     - AUTHOR_TESTING=1
