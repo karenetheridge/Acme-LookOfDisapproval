@@ -13,18 +13,10 @@ perl:
   - "5.20"
   - "5.18"
   - "5.16"
-matrix:
-  - script:
-      - perl Build.PL
-      - ./Build
-      - prove -b -r -s -j$(test-jobs) $(test-files)
-  - env:
-      PERL_MM_FALLBACK_SILENCE_WARNING=1
-    script:
-      - perl Makefile.PL
-      - make
-      - prove -b -r -s -j$(test-jobs) $(test-files)
 env:
+  matrix:
+    - PERL_MM_FALLBACK_SILENCE_WARNING=0
+    - PERL_MM_FALLBACK_SILENCE_WARNING=1
   global:
     - AUTHOR_TESTING=1
     - AUTOMATED_TESTING=1
@@ -38,3 +30,12 @@ before_install:
   - cd $BUILD_DIR
 install:
   - cpan-install --deps
+script:
+  - if [ $PERL_MM_FALLBACK_SILENCE_WARNING ] ; then
+      perl Makefile.PL
+      make
+    else
+      perl Build.PL
+      ./Build
+    fi
+  - prove -b -r -s -j$(test-jobs) $(test-files)
