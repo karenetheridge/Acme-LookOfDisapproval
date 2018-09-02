@@ -13,6 +13,20 @@ perl:
   - "5.20"
   - "5.18"
   - "5.16"
+matrix:
+  include:
+    - name: 'Build.PL'
+      script:
+        - perl Build.PL
+        - ./Build
+        - prove -b -r -s -j$(test-jobs) $(test-files)
+    - name: 'Makefile.PL'
+      env:
+        PERL_MM_FALLBACK_SILENCE_WARNING=1
+      script:
+        - perl Makefile.PL
+        - make
+        - prove -b -r -s -j$(test-jobs) $(test-files)
 env:
   global:
     - AUTHOR_TESTING=1
@@ -27,7 +41,3 @@ before_install:
   - cd $BUILD_DIR
 install:
   - cpan-install --deps
-script:
-  - perl Build.PL
-  - ./Build
-  - prove -b -r -s -j$(test-jobs) $(test-files)
