@@ -1,6 +1,6 @@
 Revision history for Acme-LookOfDisapproval
 
-{{ $NEXT }}
+0.007     2018-09-02 21:00:36Z
           - switch from JSON to JSON::PP
           - many fixes to build infrastructure to keep pace with changes to
             the tooling ecosystem
