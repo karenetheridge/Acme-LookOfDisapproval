@@ -1,12 +1,13 @@
-sudo: false
 addons:
   apt:
     packages:
       - aspell
+      - aspell-en
 language: perl
 perl:
   - blead       # builds perl from git
   - dev         # latest point release
+  - "5.28"
   - "5.26"
   - "5.24"
   - "5.22"
