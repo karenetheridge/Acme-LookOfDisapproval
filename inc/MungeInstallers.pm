@@ -13,7 +13,7 @@ sub setup_installer
 {
     my $self = shift;
 
-    my @build_files = grep { $_->name eq 'Build.PL' } @{ $self->zilla->files };
+    my @build_files = grep $_->name eq 'Build.PL', @{ $self->zilla->files };
 
     $self->log_fatal('No Build.PL was found to munge!')
         if @build_files != 1;
