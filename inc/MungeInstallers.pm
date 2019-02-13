@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-package MungeInstallers;
+package inc::MungeInstallers;
 
 use utf8;
 use Moose;
