@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+# vim: set ts=8 sts=2 sw=2 tw=100 et :
 
 use open ':std', ':encoding(UTF-8)'; # force stdin, stdout, stderr into utf8
 use Test::More 0.88;

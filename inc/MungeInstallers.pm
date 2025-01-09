@@ -1,6 +1,7 @@
 use strict;
 use warnings;
 package inc::MungeInstallers;
+# vim: set ts=8 sts=2 sw=2 tw=100 et :
 
 use utf8;
 use Moose;

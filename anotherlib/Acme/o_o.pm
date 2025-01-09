@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use utf8;
 package Acme::ಠ_ಠ;
-# vim: set ts=8 sts=4 sw=4 tw=115 et :
+# vim: set ts=8 sts=2 sw=2 tw=100 et :
 # ABSTRACT: Send warnings with ಠ_ಠ
 
 our $VERSION = '0.007';
