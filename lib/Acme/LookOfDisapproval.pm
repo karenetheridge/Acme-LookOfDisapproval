@@ -6,7 +6,7 @@ package Acme::LookOfDisapproval;
 # ABSTRACT: Send warnings with ಠ_ಠ
 # KEYWORDS: unicode canary warning utf8 symbol ಠ_ಠ
 
-our $VERSION = '0.008';
+our $VERSION = '0.009';
 
 use Exporter;
 our @EXPORT = ('ಠ_ಠ');
