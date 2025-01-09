@@ -1,6 +1,6 @@
 Revision history for Acme-LookOfDisapproval
 
-{{ $NEXT }}
+0.008     2025-01-09 19:59:59Z
           - various toolchain updates, now using Dist::Zilla again.
 
 0.007     2018-09-02 21:00:36Z
