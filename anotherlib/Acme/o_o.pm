@@ -10,9 +10,8 @@ our $VERSION = '0.007';
 use Acme::LookOfDisapproval;
 our @EXPORT = ('ಠ_ಠ');
 
-sub import
-{
-    goto &Acme::LookOfDisapproval::import;
+sub import {
+  goto &Acme::LookOfDisapproval::import;
 }
 
 1;

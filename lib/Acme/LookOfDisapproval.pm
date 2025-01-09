@@ -11,10 +11,9 @@ our $VERSION = '0.008';
 use Exporter;
 our @EXPORT = ('ಠ_ಠ');
 
-sub import
-{
-    utf8->import;
-    goto &Exporter::import;
+sub import {
+  utf8->import;
+  goto &Exporter::import;
 }
 
 sub ಠ_ಠ { goto &CORE::warn }
