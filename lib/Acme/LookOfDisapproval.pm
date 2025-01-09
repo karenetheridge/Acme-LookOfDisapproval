@@ -80,6 +80,10 @@ didn't work either (for example, see C<t/00-compile.t> -- C<< qx(^$X "require $_
 both needs the C<:binmode> or C<:encoding(UTF-8)> layer applied to C<STDOUT>, and
 requires the L<utf8> pragma applied in the sub-perl (leading to more patches).
 
+After pushing several patches to core L<Dist::Zilla> and some independently-distributed plugins,
+I have been able to switch back to packaging with L<Dist::Zilla>.
+Everything is now much more unicode-clean! 💃
+
 =head1 SEE ALSO
 
 =for :list
